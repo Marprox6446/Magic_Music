@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Música - Equipos de Audio</title>
+    <link rel="stylesheet" href="audio.css">
+</head>
+<body>
+    <header>
+        <h1>Tienda de Música</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Tienda</a></li>
+                <li><a href="comunidad.html">Comunidad</a></li>
+                <li><a href="recursos.html">Recursos</a></li>
+                <li><a href="Iniciar_Sesión.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="catalogo">
+            <h2>Equipos de Audio</h2>
+            <div class="categorias">
+                <h3>Categorías</h3>
+                <ul>
+                    <li><a href="#" onclick="cambiarCategoria('categoria-amplificadores')">Amplificadores</a></li>
+                    <li><a href="#" onclick="cambiarCategoria('categoria-altavoces')">Altavoces</a></li>
+                    <li><a href="#" onclick="cambiarCategoria('categoria-microfonos')">Micrófonos</a></li>
+                    <li><a href="#" onclick="cambiarCategoria('categoria-mesas-de-mezcla')">Mesas de Mezcla</a></li>
+                    <li><a href="#" onclick="cambiarCategoria('categoria-accesorios-audio')">Accesorios de Audio</a></li>
+                </ul>
+            </div>
+
+            <div class="productos">
+                <div id="categoria-amplificadores" class="categoria">
+                    <div class="equipo">
+                        <div class="equipo-info">
+                            <h4>Amplificador Fender Mustang</h4>
+                            <p>El amplificador Fender Mustang ofrece una gran calidad de sonido con múltiples efectos y presets para cualquier género musical.</p>
+                        </div>
+                        <div class="equipo-img">
+                            <img src="amplificador.jpg" alt="Amplificador Fender Mustang">
+                        </div>
+                    </div>
+                    <!-- Añadir más equipos de amplificadores aquí -->
+                </div>
+
+                <div id="categoria-altavoces" class="categoria" style="display:none;">
+                    <div class="equipo">
+                        <div class="equipo-info">
+                            <h4>Altavoz JBL Professional</h4>
+                            <p>El altavoz JBL Professional ofrece un sonido claro y potente, perfecto para eventos en vivo y sesiones de estudio.</p>
+                        </div>
+                        <div class="equipo-img">
+                            <img src="altavoz.jpg" alt="Altavoz JBL Professional">
+                        </div>
+                    </div>
+                    <!-- Añadir más equipos de altavoces aquí -->
+                </div>
+
+                <div id="categoria-microfonos" class="categoria" style="display:none;">
+                    <div class="equipo">
+                        <div class="equipo-info">
+                            <h4>Micrófono Shure SM58</h4>
+                            <p>El micrófono Shure SM58 es la elección estándar para voces en vivo, ofreciendo durabilidad y claridad en el sonido.</p>
+                        </div>
+                        <div class="equipo-img">
+                            <img src="microfono.jpg" alt="Micrófono Shure SM58">
+                        </div>
+                    </div>
+                    <!-- Añadir más equipos de micrófonos aquí -->
+                </div>
+
+                <div id="categoria-mesas-de-mezcla" class="categoria" style="display:none;">
+                    <div class="equipo">
+                        <div class="equipo-info">
+                            <h4>Mesa de Mezcla Yamaha MG10XU</h4>
+                            <p>La mesa de mezcla Yamaha MG10XU ofrece una gran versatilidad y efectos de alta calidad para cualquier configuración de sonido.</p>
+                        </div>
+                        <div class="equipo-img">
+                            <img src="mezcladora.jpg" alt="Mesa de Mezcla Yamaha MG10XU">
+                        </div>
+                    </div>
+                    <!-- Añadir más equipos de mesas de mezcla aquí -->
+                </div>
+
+                <div id="categoria-accesorios-audio" class="categoria" style="display:none;">
+                    <div class="equipo">
+                        <div class="equipo-info">
+                            <h4>Soporte de Micrófono Hercules</h4>
+                            <p>El soporte de micrófono Hercules ofrece estabilidad y durabilidad, ideal para cualquier entorno de grabación o actuación en vivo.</p>
+                        </div>
+                        <div class="equipo-img">
+                            <img src="soporte.jpg" alt="Soporte de Micrófono Hercules">
+                        </div>
+                    </div>
+                    <!-- Añadir más equipos de accesorios de audio aquí -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tienda de Música</p>
+    </footer>
+
+    <script>
+        function cambiarCategoria(categoriaId) {
+            // Ocultar todas las categorías
+            var categorias = document.querySelectorAll('.categoria');
+            categorias.forEach(function(categoria) {
+                categoria.style.display = 'none';
+            });
+
+            // Mostrar la categoría seleccionada
+            var categoriaSeleccionada = document.getElementById(categoriaId);
+            if (categoriaSeleccionada) {
+                categoriaSeleccionada.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

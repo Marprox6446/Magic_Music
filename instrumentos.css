@@ -1,0 +1,170 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a.active {
+    color: #ffd700; /* Amarillo para el enlace activo */
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilos del catálogo de instrumentos */
+.catalogo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.categorias {
+    flex: 0 0 25%; /* Toma el 25% del ancho del contenedor principal */
+    padding-right: 20px;
+    background-color: #f2f2f2; /* Color de fondo de las categorías */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Para ocultar las animaciones de desplazamiento */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.categorias h3 {
+    margin-top: 0;
+    padding: 10px;
+    background-color: #333; /* Color de fondo del encabezado */
+    color: #fff;
+    border-top-left-radius: 10px; /* Bordes redondeados en la esquina superior izquierda */
+    border-top-right-radius: 10px; /* Bordes redondeados en la esquina superior derecha */
+}
+
+.categorias ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.categorias ul li {
+    margin-bottom: 10px;
+}
+
+.categorias ul li a {
+    display: block;
+    padding: 10px;
+    color: #333; /* Color de texto */
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s; /* Animación de transición */
+}
+
+.categorias ul li a:hover {
+    background-color: #333; /* Color de fondo al pasar el cursor */
+    color: #fff; /* Color de texto al pasar el cursor */
+}
+
+
+.instrumento {
+    flex: 0 0 25%; /* Toma el 25% del ancho del contenedor principal */
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.instrumento-info {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: #fff;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: background-color 0.3s;
+}
+
+.instrumento-info:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Color de fondo más oscuro al pasar el cursor */
+}
+
+.instrumento-info h4 {
+    margin-top: 0;
+}
+
+.instrumento-img img {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.instrumento:hover .instrumento-img img {
+    transform: scale(1.1); /* Agranda la imagen al pasar el cursor */
+}
+
+footer {
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    display: block;
+}
+
+footer ul li a img {
+    width: 60px; /* ajusta el tamaño de las imágenes */
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+footer ul li a:hover img {
+    transform: scale(1.1); /* escala la imagen al pasar el cursor */
+}
+
+footer ul li a img {
+    width: 60px; /* ajusta el tamaño de las imágenes */
+    height: 100px; /* asegura que las imágenes sean cuadradas */
+    border-radius: 50%; /* hace que las imágenes sean redondas */
+    transition: transform 0.2s;
+    display: block;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 10px;
+    overflow: hidden; /* para asegurar que las imágenes redondas se recorten correctamente */
+}

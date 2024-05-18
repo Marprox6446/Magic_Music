@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador - Gestión de Productos</title>
+    <link rel="stylesheet" href="adm.css">
+</head>
+<body>
+    <header>
+        <h1>Administrador - Gestión de Productos</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pagina-usuario.html">TIENDA</a></li>
+                <li><a href="#" onclick="cerrarSesion()">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="gestion-productos">
+            <h2>Productos</h2>
+            <table id="productosTabla">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Imagen</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Los productos se insertarán aquí dinámicamente -->
+                </tbody>
+            </table>
+            <button onclick="mostrarFormularioAgregar()">Agregar Producto</button>
+        </section>
+
+        <section id="formularioProducto" style="display: none;">
+            <h2 id="formularioTitulo">Agregar Producto</h2>
+            <form id="productoForm">
+                <div class="input-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="input-group">
+                    <label for="descripcion">Descripción:</label>
+                    <input type="text" id="descripcion" name="descripcion" required>
+                </div>
+                <div class="input-group">
+                    <label for="imagen">URL de la Imagen:</label>
+                    <input type="text" id="imagen" name="imagen" required>
+                </div>
+                <button type="submit">Guardar</button>
+                <button type="button" onclick="cancelarFormulario()">Cancelar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tienda de Música</p>
+    </footer>
+
+    <script src="adm.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidad - Tienda de Música</title>
+    <link rel="stylesheet" href="comunidad.css">
+</head>
+<body>
+    <header>
+        <h1>Tienda de Música</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="comunidad.html" class="active">Comunidad</a></li>
+                <li><a href="recursos.html">Recursos</a></li>
+                <li><a href="Iniciar_Sesión.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="foro">
+            <h2>Foro de Discusión</h2>
+            <div class="foro-temas">
+                <div class="tema">
+                    <h3>Instrumentos de cuerda</h3>
+                    <p>Discute sobre guitarras, bajos, violines y más.</p>
+                    <button onclick="window.location.href='foro_cuerdas.html'">Entrar</button>
+                </div>
+                <div class="tema">
+                    <h3>Equipos de sonido</h3>
+                    <p>Comparte opiniones sobre amplificadores, altavoces y equipos de grabación.</p>
+                    <button onclick="window.location.href='foro_sonido.html'">Entrar</button>
+                </div>
+                <!-- Más temas -->
+            </div>
+        </section>
+        <section id="resenas">
+            <h2>Reseñas de Productos</h2>
+            <div class="resena">
+                <h3>Micrófono Shure SM58</h3>
+                <p>¡Excelente calidad de sonido para presentaciones en vivo!</p>
+                <button onclick="window.location.href='resena_sm58.html'">Leer más</button>
+            </div>
+            <div class="resena">
+                <h3>Guitarra Fender Stratocaster</h3>
+                <p>Una guitarra icónica con un sonido versátil.</p>
+                <button onclick="window.location.href='resena_fender.html'">Leer más</button>
+            </div>
+            <!-- Más reseñas -->
+        </section>
+        <section id="eventos">
+            <h2>Eventos</h2>
+            <div class="evento">
+                <h3>Concierto de Rock</h3>
+                <p>Fecha: 25 de Junio, 2024</p>
+                <button onclick="window.location.href='evento_rock.html'">Ver detalles</button>
+            </div>
+            <div class="evento">
+                <h3>Taller de Producción Musical</h3>
+                <p>Fecha: 15 de Julio, 2024</p>
+                <button onclick="window.location.href='evento_taller.html'">Ver detalles</button>
+            </div>
+            <!-- Más eventos -->
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Tienda de Música</p>
+        <div class="footer-links">
+            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+        </div>
+    </footer>
+</body>
+</html>

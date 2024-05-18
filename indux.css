@@ -1,0 +1,315 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('fondo3.webp');
+    background-size: cover; /* Para que la imagen cubra todo el fondo */
+    background-position: center; /* Para centrar la imagen en el fondo */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 80px; /* Ajusta el tamaño del logo según sea necesario */
+    border-radius: 50%;
+}
+
+.titulo h1 {
+    margin: 0;
+    animation: cambioColor 5s infinite alternate;
+}
+
+@keyframes cambioColor {
+    0% {
+        color: red;
+    }
+    50% {
+        color: white;
+    }
+    100% {
+        color: blue;
+    }
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    opacity: 0;
+    animation: aparecerBoton 1s forwards;
+    transition: transform 0.3s, color 0.3s;
+}
+
+@keyframes aparecerBoton {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav ul li:hover > a {
+    transform: scale(1.1);
+    color: #ffd700; /* Cambia el color al pasar el cursor */
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    padding: 0;
+    z-index: 1;
+}
+
+nav ul li:hover ul {
+    display: block;
+    animation: desplegar 0.5s forwards;
+}
+
+@keyframes desplegar {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav ul li ul li {
+    display: block;
+}
+
+nav ul li ul li a {
+    padding: 10px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+main section {
+    margin-bottom: 30px;
+}
+
+/* Estilos para las "cápsulas" */
+section {
+    display: flex;
+    align-items: center; /* Alinea el contenido verticalmente */
+    width: calc(97% - 20px); /* Ajusta el ancho de cada sección */
+    margin: 10px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+/* Estilos para el contenido de texto */
+.texto {
+    flex: 1; /* Permite que ocupe todo el espacio restante */
+}
+
+/* Estilos para el título */
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el párrafo */
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el contenedor de imágenes */
+.imagen-container {
+    flex-shrink: 0; /* Evita que las imágenes se contraigan para ajustarse */
+    margin-left: 20px; /* Espacio entre la imagen y el texto */
+}
+
+/* Estilos para las imágenes */
+.imagen-container img {
+    width: 150px; /* Tamaño de las imágenes */
+    height: auto; /* Altura automática para mantener la proporción */
+    border-radius: 10px; /* Borde redondeado */
+}
+
+
+footer {
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    display: block;
+}
+
+footer ul li a img {
+    width: 100px; /* ajusta el tamaño de las imágenes */
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+footer ul li a:hover img {
+    transform: scale(1.1); /* escala la imagen al pasar el cursor */
+}
+
+footer ul li a img {
+    width: 80px; /* ajusta el tamaño de las imágenes */
+    height: 100px; /* asegura que las imágenes sean cuadradas */
+    border-radius: 50%; /* hace que las imágenes sean redondas */
+    transition: transform 0.2s;
+    display: block;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 10px;
+    overflow: hidden; /* para asegurar que las imágenes redondas se recorten correctamente */
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+}
+
+/* Estilos adicionales para el menú */
+#menu h1 {
+    margin: 0;
+    padding: 0 20px;
+    line-height: 40px;
+    float: left;
+}
+
+#menu nav {
+    float: right;
+}
+
+#menu nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+#menu nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+#menu nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#menu {
+    position: fixed;
+    top: 0px; /* Ajusta esta propiedad según sea necesario */
+    left: 0;
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.7); /* Cambia el valor alfa (0.7) para ajustar la opacidad */
+    color: #fff;
+    padding: 10px 0;
+    z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+}
+
+#menu ul {
+    background-color: rgba(51, 51, 51, 0.7); /* Cambia el valor alfa (0.7) para ajustar la opacidad */
+    padding: 10px 0;
+    margin: 0;
+    list-style: none;
+}
+
+#menu ul li {
+    display: inline-block;
+    position: relative; /* Añade posición relativa para el menú desplegable */
+}
+
+#menu ul li:hover {
+    background-color: rgba(255, 255, 0, 0.5); /* Cambia el color amarillo al pasar el cursor */
+}
+
+#menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(51, 51, 51, 0.7); /* Trasparencia para el menú desplegable */
+}
+
+#menu ul ul li {
+    display: block;
+}
+
+#menu ul li:hover > ul {
+    display: block;
+}
